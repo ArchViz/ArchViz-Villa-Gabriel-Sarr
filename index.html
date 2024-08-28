@@ -13,7 +13,7 @@
         Villa Sarr
     </title>
 
-    <script rel=preload src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script rel=preload src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script rel=preload src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js">
     </script>
 
@@ -61,6 +61,7 @@
             <img id="Scene-5" src="./Style/Images/Scene-5.jpg">
             <img id="Scene-6" src="./Style/Images/Scene-6.jpg">
             <img id="Scene-7" src="./Style/Images/Scene-7.jpg">
+            <img id="Scene-8" src="./Style/Images/Scene-8.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -224,33 +225,25 @@
                 rotation="-64.50186970244269 -92.73493801530914 2.817233478658258"
                 the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"             position="-8.17135 -1.22481 0.30004" 
+                rotation="-68.5154390573341 93.21564960542389 177.35622069377067"
+                the_dote="Name_of_dote: Dote-8 ; Group_to_activate: Group-8 ; The_rotation: 0">
+            </a-plane>
+
+        
 
     
         </a-entity>
         <!-- Group-8 -->
-        <!-- <a-entity scale="0 0 0" class="groups" id="Group-8" visible="false">
+        <a-entity scale="0 0 0" class="groups" id="Group-8" visible="false">
 
             <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
                 material="src: #Arrow-1; transparent:true" position="-3.75724 -1.56756 -0.78206"
                 rotation="-71.46273395548705 93.70438260467049 176.83540205799676"
-                the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6 ; The_rotation: 0">
+                the_dote="Name_of_dote: Dote-7 ; Group_to_activate: Group-7 ; The_rotation: 0">
             </a-plane>
-
-            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
-                material="src: #Arrow-1; transparent:true" position="2.38636 -1.56756 -3.65837"
-                rotation="-76.33516704527958 -94.98838102355866 5.196154244041436"
-                the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9 ; The_rotation: 0">
-            </a-plane>
-            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
-                material="src: #Arrow-1; transparent:true" position="2.60305 -1.56756 4.00895"
-                rotation="-76.33516704527958 -94.98838102355866 5.196154244041436"
-                the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10 ; The_rotation: 0">
-            </a-plane>
-
-
-
-
-        </a-entity> -->
+        </a-entity>
         <!-- Group-9 -->
         <!-- <a-entity scale="0 0 0" class="groups" id="Group-9" visible="false">
 
@@ -575,7 +568,7 @@
             the_group_to_activate.setAttribute('visible', 'true')
             the_group_to_activate.setAttribute('scale', '1 1 1')
         }
-        setStrat(0)
+        setStrat(6)
 
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
