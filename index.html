@@ -1089,13 +1089,13 @@
             the_group_to_activate.setAttribute('visible', 'true')
             the_group_to_activate.setAttribute('scale', '1 1 1')
         }
-        setStrat(0)
+        setStrat(45)
 
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
 
             init: function () {
-                var stringToLog = this.data;
+                var stringTqoLog = this.data;
                 let Dote_Name = this.data.Name_of_dote
                 let Group_to_activate = this.data.Group_to_activate
                 let TheRotation = this.data.The_rotation
