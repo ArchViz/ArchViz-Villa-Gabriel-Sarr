@@ -116,6 +116,10 @@
             <img id="Scene-58" src="./Style/Images/Scene-58.jpg">
             <img id="Scene-59" src="./Style/Images/Scene-59.jpg">
             <img id="Scene-60" src="./Style/Images/Scene-60.jpg">
+            <img id="Scene-61" src="./Style/Images/Scene-61.jpg">
+            <img id="Scene-62" src="./Style/Images/Scene-62.jpg">
+            <img id="Scene-63" src="./Style/Images/Scene-63.jpg">
+            <img id="Scene-64" src="./Style/Images/Scene-64.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -702,7 +706,12 @@
                 rotation="-54.12560403262348 80.30289977656054 177.76703143287946"
                 the_dote="Name_of_dote: Dote-24 ; Group_to_activate: Group-24 ; The_rotation: 0">
             </a-plane>
-         
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="-0.07899 -1.31584 -1.90624" rotation="-77.82714914380024 62.087425553761406 -162.73949438218824"
+                the_dote="Name_of_dote: Dote-61 ; Group_to_activate: Group-61 ; The_rotation: 0">
+            </a-plane>
+
         </a-entity>
         <!-- Group-28 -->
         <a-entity scale="0 0 0" class="groups" id="Group-28" visible="false">
@@ -713,6 +722,14 @@
                 rotation="-51.296911398062605 -95.6638982640179 -3.0406870187592787"
                   the_dote="Name_of_dote: Dote-24 ; Group_to_activate: Group-24 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="-0.03252 -1.31584 -1.9261"
+                rotation="-86.45990424303635 178.0294461030494 84.50783703502563" 
+                   the_dote="Name_of_dote: Dote-63 ; Group_to_activate: Group-63 ; The_rotation: 0">
+            </a-plane>
+
+        
 
         </a-entity>
         <!-- Group-29 -->
@@ -1271,6 +1288,75 @@
 
 
         </a-entity>
+        <!-- Group-61 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-61" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="-0.15205 -1.36315 1.93647"
+                rotation="-84.14114404614192 67.24977528789013 -158.07905567659412" 
+                 the_dote="Name_of_dote: Dote-27 ; Group_to_activate: Group-27 ; The_rotation: 0">
+            </a-plane>
+
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="-2.45703 -1.36315 -0.02295"
+                rotation="-84.14114404614192 67.24977528789013 -158.07905567659412"
+                the_dote="Name_of_dote: Dote-62 ; Group_to_activate: Group-62 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-62 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-62" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="2.56745 -1.36315 -0.04588"
+                rotation="-45.06714129160516 -86.79623046877815 -2.991985606173159" 
+                  the_dote="Name_of_dote: Dote-61 ; Group_to_activate: Group-61 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-63 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-63" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="2.56745 -1.36315 -0.04588"
+                rotation="-45.06714129160516 -86.79623046877815 -2.991985606173159" 
+                  the_dote="Name_of_dote: Dote-64 ; Group_to_activate: Group-64 ; The_rotation: 0">
+            </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="0.81682 -1.36315 2.18373" 
+                rotation="-86.73435102690402 -46.14315603086085 -44.53314462654323"
+                      the_dote="Name_of_dote: Dote-28 ; Group_to_activate: Group-28 ; The_rotation: 0">
+            </a-plane>
+
+         
+
+
+
+        </a-entity>
+        <!-- Group-64 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-64" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true"    
+                position="-2.43285 -1.36315 -0.04588" 
+                rotation="-46.94586990183913 86.6856496143179 -178.299309224556" 
+                   the_dote="Name_of_dote: Dote-63 ; Group_to_activate: Group-63 ; The_rotation: 0">
+            </a-plane>
+
+         
+
+        </a-entity>
       
         <!-- ############################################################ -->
         <!-- ############################################################ -->
@@ -1509,6 +1595,18 @@
                                 break;
                             case 'Dote-60':
                                 the_sky.setAttribute('src', '#Scene-60')
+                                break;
+                            case 'Dote-61':
+                                the_sky.setAttribute('src', '#Scene-61')
+                                break;
+                            case 'Dote-62':
+                                the_sky.setAttribute('src', '#Scene-62')
+                                break;
+                            case 'Dote-63':
+                                the_sky.setAttribute('src', '#Scene-63')
+                                break;
+                            case 'Dote-64':
+                                the_sky.setAttribute('src', '#Scene-64')
                                 break;
                             default:
                                 break;
