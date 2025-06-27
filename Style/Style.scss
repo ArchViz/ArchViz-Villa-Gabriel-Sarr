@@ -141,8 +141,6 @@ html {
 .a-enter-vr {
   background: rgba(55, 55, 60, 0);
   display: none;
-  opacity: 0;
-  z-index: -1;
 
   .a-enter-vr-button {
     background: rgba(55, 55, 60, 0);
@@ -151,6 +149,7 @@ html {
     background-size: 90%;
     background-position: center;
     transform: scale(1);
+    // filter: invert(100%);
 
     &:hover {
       background-image: url("./Images/PNG/VR-icon.png");
@@ -197,33 +196,16 @@ html {
   }
 }
 
-.the_description {
-  position: absolute;
-  bottom: -200%;
-  left: 2%;
-  z-index: 16;
-  width: 20em;
-  height: auto;
-  background-color: rgba(#f1f1f1, 0.7);
-  padding: 1em;
-  color: #000;
-  @include cent();
-  font-family: "Roboto", sans-serif;
-  border-radius: 0.5em;
-  transition-duration: 0.1s;
-}
-
 .link_to_archviz {
   width: 1.5em;
   height: 1.5em;
-  position: absolute;
-  @include cent();
+  position: fixed;
   bottom: calc(2% + 0em);
-  right: calc(2% + 0em);
+  left: calc(2% + 0em);
+  @include cent();
   z-index: 10;
   padding: 0.3em;
   color: #f1f1f1;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-decoration: none;
   background-image: url("./Images/PNG/favicon.png");
@@ -250,8 +232,6 @@ html {
   .a-enter-vr {
     background-image: url("./Images/PNG/VR-icon.png");
     display: flex;
-    opacity: 1;
-    z-index: 1;
   }
 
   .the_gallery_container {
