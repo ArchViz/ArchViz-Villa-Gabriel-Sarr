@@ -146,6 +146,7 @@
         <img id="Scene-80" src="./Style/Images/Scene-80.jpg" />
         <img id="Scene-81" src="./Style/Images/Scene-81.jpg" />
         <img id="Scene-82" src="./Style/Images/Scene-82.jpg" />
+        <img id="Scene-85" src="./Style/Images/Scene-85.jpg" />
       </a-assets>
 
       <a-entity
@@ -2036,7 +2037,7 @@
           material="src: #Arrow-2; transparent:true"
           position="1.02116 -1.36315 -0.66589"
           rotation="-74.16594883291428 -81.68258214723555 -8.72786609322783"
-          the_dote="Name_of_dote: Dote-67 ; Group_to_activate: Group-67 ; The_rotation: 0"
+          the_dote="Name_of_dote: Dote-85 ; Group_to_activate: Group-85 ; The_rotation: 0"
         >
         </a-plane>
         <a-plane
@@ -2421,6 +2422,20 @@
         >
         </a-plane>
       </a-entity>
+      <!-- Group-85 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-85" visible="false">
+        <a-plane
+          data-clickable
+          scale="0.9 0.9 0.9"
+          opacity=".5"
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-2.64154 -0.57918 0.38841"
+          rotation="-73.25952960101732 87.5611291252778 -178.31535204281968"
+          the_dote="Name_of_dote: Dote-66; Group_to_activate: Group-66 ; The_rotation: 0"
+        >
+        </a-plane>
+      </a-entity>
       <!-- ############################################################ -->
       <!-- ############################################################ -->
       <!-- ############################################################ -->
@@ -2734,6 +2749,9 @@
                   break;
                 case "Dote-82":
                   the_sky.setAttribute("src", "#Scene-82");
+                  break;
+                case "Dote-85":
+                  the_sky.setAttribute("src", "#Scene-85");
                   break;
                 default:
                   break;
