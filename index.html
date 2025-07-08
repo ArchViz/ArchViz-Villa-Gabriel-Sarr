@@ -54,7 +54,10 @@
 
     <div class="the_blach_hover"></div>
     <a-scene
-      device-permission-ui="enabled: true"
+      background="color: #FAFAFA"
+      device-orientation-permission-ui="enabled: false"
+      vr-mode-ui="enabled: false"
+      networked-scene="room: dev; debug: true; adapter: socketio;"
       id="the_scene"
       the_scene
       cursor="rayOrigin: mouse"
