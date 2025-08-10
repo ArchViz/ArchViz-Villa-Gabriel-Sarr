@@ -153,6 +153,14 @@ html {
   cursor: none;
 }
 
+.fullscreen {
+  display: none;
+}
+.a-enter-vr-button {
+  background-image: url("./Images/PNG/VR-icon.png");
+  display: none;
+}
+
 .the_blach_hover {
   width: 100vw;
   height: 0vh;
