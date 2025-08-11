@@ -275,6 +275,7 @@ html {
   display: none;
   opacity: 1;
   animation-duration: 0.7s;
+  pointer-events: none;
 }
 
 @media all and (max-width: 500px) {
@@ -328,9 +329,10 @@ html {
   }
 
   .The-Guide {
+    pointer-events: none;
     display: flex;
     bottom: calc(40% - 5em);
-    animation-duration: 0.7s;
     opacity: 1;
+    transition-duration: 0.7s;
   }
 }
