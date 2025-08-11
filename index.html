@@ -2507,6 +2507,7 @@
     <script>
       let loaderContainer = document.querySelector(".hover_loader_container");
       let theGuide = document.querySelector(".The-Guide");
+      let linkToArchviz = document.querySelector(".link_to_archviz");
 
       let groups = document.querySelectorAll(".groups");
       let the_sky = document.querySelector("#image-360");
@@ -2857,6 +2858,7 @@
           }, "5000");
           setTimeout(() => {
             theGuide.style.display = "none";
+            linkToArchviz.style.opacity = "1";
           }, "6000");
         } else {
           console.log(img_1.complete);
