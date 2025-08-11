@@ -237,7 +237,25 @@ html {
   transform: scale(1.1);
 }
 
-@media all and (max-width: 1000px) {
+.The-Guide {
+  background-image: url("./Images/PNG/Phone-GIF.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 50;
+  width: 16em;
+  height: 10em;
+  position: absolute;
+  margin: auto;
+  bottom: -105%;
+  left: calc(50% - 8em);
+  display: none;
+  opacity: 1;
+  animation-duration: 0.7s;
+}
+
+@media all and (max-width: 500px) {
   .The_Image {
     width: 93vw;
     left: 2.5vw;
@@ -280,5 +298,11 @@ html {
     bottom: 1em;
     right: none;
     left: 1em;
+  }
+  .The-Guide {
+    display: flex;
+    bottom: calc(40% - 5em);
+    animation-duration: 0.7s;
+    opacity: 1;
   }
 }/*# sourceMappingURL=Style.css.map */

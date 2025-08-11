@@ -58,6 +58,8 @@
 
     <div class="The_Image_Back_Cover"></div>
 
+    <div class="The-Guide"></div>
+
     <div class="the_blach_hover"></div>
     <a-scene
       background="color: #FAFAFA"
@@ -1916,7 +1918,7 @@
           opacity=".5"
           class="Dote"
           material="src: #Arrow-1; transparent:true"
-          position="-0.4633 -1.36315 -4.03928"
+          position="-0.4633 -1.36315 -2.61484"
           rotation="-84.14114404614192 67.24977528789013 -158.07905567659412"
           the_dote="Name_of_dote: Dote-38 ; Group_to_activate: Group-38 ; The_rotation: 0"
         >
@@ -2504,6 +2506,7 @@
     </a-scene>
     <script>
       let loaderContainer = document.querySelector(".hover_loader_container");
+      let theGuide = document.querySelector(".The-Guide");
 
       let groups = document.querySelectorAll(".groups");
       let the_sky = document.querySelector("#image-360");
@@ -2846,8 +2849,15 @@
       function intFunc() {
         if (img_1.complete) {
           loaderContainer.style.display = "none";
-          console.log(img_1.complete);
           clearInterval(theInt);
+
+          theGuide.style.display = "flex";
+          setTimeout(() => {
+            theGuide.style.opacity = "0";
+          }, "3000");
+          setTimeout(() => {
+            theGuide.style.display = "none";
+          }, "4000");
         } else {
           console.log(img_1.complete);
         }
