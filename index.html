@@ -2505,29 +2505,32 @@
       <!-- ############################################################ -->
     </a-scene>
     <script>
-      let loaderContainer = document.querySelector(".hover_loader_container");
-      let theGuide = document.querySelector(".The-Guide");
-      let linkToArchviz = document.querySelector(".link_to_archviz");
+      const loaderContainer = document.querySelector(".hover_loader_container");
+      const theGuide = document.querySelector(".The-Guide");
+      const linkToArchviz = document.querySelector(".link_to_archviz");
+      const groups = document.querySelectorAll(".groups");
+      const theSky = document.querySelector("#image-360");
+      const theBlachHover = document.querySelector(".the_blach_hover");
+      const img1 = document.querySelector("#Scene-0");
 
-      let groups = document.querySelectorAll(".groups");
-      let the_sky = document.querySelector("#image-360");
-      let the_cursor = document.querySelector(".a-mouse-cursor-hover");
-      let theBlachHover = document.querySelector(".the_blach_hover");
-      let img_1 = document.querySelector("#Scene-0");
+      const setStart = (index) => {
+        theSky.setAttribute("src", `#Scene-${index}`);
+        updateGroupVisibility(`Group-${index}`);
+      };
 
-      const setStrat = (theStrat) => {
-        the_sky.setAttribute("src", `#Scene-${theStrat}`);
-        let the_group_to_activate = document.querySelector(
-          `#Group-${theStrat}`
-        );
+      const updateGroupVisibility = (groupId) => {
         groups.forEach((group) => {
           group.setAttribute("visible", "false");
           group.setAttribute("scale", "0 0 0");
         });
-        the_group_to_activate.setAttribute("visible", "true");
-        the_group_to_activate.setAttribute("scale", "1 1 1");
+        const groupToActivate = document.querySelector(`#${groupId}`);
+        if (groupToActivate) {
+          groupToActivate.setAttribute("visible", "true");
+          groupToActivate.setAttribute("scale", "1 1 1");
+        }
       };
-      setStrat(3);
+
+      setStart(3);
 
       AFRAME.registerComponent("the_dote", {
         schema: {
@@ -2537,334 +2540,58 @@
         },
 
         init: function () {
-          var stringTqoLog = this.data;
-          let Dote_Name = this.data.Name_of_dote;
-          let Group_to_activate = this.data.Group_to_activate;
-          let TheRotation = this.data.The_rotation;
-          let The_Arrow = this.el;
+          const { Name_of_dote, Group_to_activate, The_rotation } = this.data;
+          const doteNumber = parseInt(Name_of_dote.replace("Dote-", ""), 10);
+
           this.el.setAttribute(
             "event-set__mouseleave",
-            "scale: 0.9 0.9 0.9 ; opacity : 0.5 "
+            "scale: 0.9 0.9 0.9; opacity: 0.5"
           );
           this.el.setAttribute(
             "event-set__mouseenter",
-            "scale: 1.1 1.1 1.1 ; opacity : 1"
+            "scale: 1.1 1.1 1.1; opacity: 1"
           );
-          this.el.addEventListener("click", (theDote) => {
-            the_sky.setAttribute("rotation", `0 ${TheRotation} 0`);
 
-            theBlachHover.style.transitionDelay = "0s , 0s";
-            theBlachHover.style.opacity = "1";
-            theBlachHover.style.height = "100vh";
-
-            setTimeout(() => {
-              theBlachHover.style.transitionDelay = "0s , .6s";
-
-              switch (Dote_Name) {
-                case "Dote-0":
-                  the_sky.setAttribute("src", "#Scene-0");
-                  break;
-                case "Dote-1":
-                  the_sky.setAttribute("src", "#Scene-1");
-                  break;
-                case "Dote-2":
-                  the_sky.setAttribute("src", "#Scene-2");
-                  break;
-                case "Dote-3":
-                  the_sky.setAttribute("src", "#Scene-3");
-                  break;
-                case "Dote-4":
-                  the_sky.setAttribute("src", "#Scene-4");
-                  break;
-                case "Dote-5":
-                  the_sky.setAttribute("src", "#Scene-5");
-                  break;
-                case "Dote-6":
-                  the_sky.setAttribute("src", "#Scene-6");
-                  break;
-                case "Dote-7":
-                  the_sky.setAttribute("src", "#Scene-7");
-                  break;
-                case "Dote-8":
-                  the_sky.setAttribute("src", "#Scene-8");
-                  break;
-                case "Dote-9":
-                  the_sky.setAttribute("src", "#Scene-9");
-                  break;
-                case "Dote-10":
-                  the_sky.setAttribute("src", "#Scene-10");
-                  break;
-                case "Dote-11":
-                  the_sky.setAttribute("src", "#Scene-11");
-                  break;
-                case "Dote-12":
-                  the_sky.setAttribute("src", "#Scene-12");
-                  break;
-                case "Dote-13":
-                  the_sky.setAttribute("src", "#Scene-13");
-                  break;
-                case "Dote-14":
-                  the_sky.setAttribute("src", "#Scene-14");
-                  break;
-                case "Dote-15":
-                  the_sky.setAttribute("src", "#Scene-15");
-                  break;
-                case "Dote-16":
-                  the_sky.setAttribute("src", "#Scene-16");
-                  break;
-                case "Dote-17":
-                  the_sky.setAttribute("src", "#Scene-17");
-                  break;
-                case "Dote-18":
-                  the_sky.setAttribute("src", "#Scene-18");
-                  break;
-                case "Dote-19":
-                  the_sky.setAttribute("src", "#Scene-19");
-                  break;
-                case "Dote-20":
-                  the_sky.setAttribute("src", "#Scene-20");
-                  break;
-                case "Dote-21":
-                  the_sky.setAttribute("src", "#Scene-21");
-                  break;
-                case "Dote-22":
-                  the_sky.setAttribute("src", "#Scene-22");
-                  break;
-                case "Dote-23":
-                  the_sky.setAttribute("src", "#Scene-23");
-                  break;
-                case "Dote-24":
-                  the_sky.setAttribute("src", "#Scene-24");
-                  break;
-                case "Dote-25":
-                  the_sky.setAttribute("src", "#Scene-25");
-                  break;
-                case "Dote-26":
-                  the_sky.setAttribute("src", "#Scene-26");
-                  break;
-                case "Dote-27":
-                  the_sky.setAttribute("src", "#Scene-27");
-                  break;
-                case "Dote-28":
-                  the_sky.setAttribute("src", "#Scene-28");
-                  break;
-                case "Dote-29":
-                  the_sky.setAttribute("src", "#Scene-29");
-                  break;
-                case "Dote-30":
-                  the_sky.setAttribute("src", "#Scene-30");
-                  break;
-                case "Dote-31":
-                  the_sky.setAttribute("src", "#Scene-31");
-                  break;
-                case "Dote-32":
-                  the_sky.setAttribute("src", "#Scene-32");
-                  break;
-                case "Dote-33":
-                  the_sky.setAttribute("src", "#Scene-33");
-                  break;
-                case "Dote-34":
-                  the_sky.setAttribute("src", "#Scene-34");
-                  break;
-                case "Dote-35":
-                  the_sky.setAttribute("src", "#Scene-35");
-                  break;
-                case "Dote-36":
-                  the_sky.setAttribute("src", "#Scene-36");
-                  break;
-                case "Dote-37":
-                  the_sky.setAttribute("src", "#Scene-37");
-                  break;
-                case "Dote-38":
-                  the_sky.setAttribute("src", "#Scene-38");
-                  break;
-                case "Dote-39":
-                  the_sky.setAttribute("src", "#Scene-39");
-                  break;
-                case "Dote-40":
-                  the_sky.setAttribute("src", "#Scene-40");
-                  break;
-                case "Dote-41":
-                  the_sky.setAttribute("src", "#Scene-41");
-                  break;
-                case "Dote-42":
-                  the_sky.setAttribute("src", "#Scene-42");
-                  break;
-                case "Dote-43":
-                  the_sky.setAttribute("src", "#Scene-43");
-                  break;
-                case "Dote-44":
-                  the_sky.setAttribute("src", "#Scene-44");
-                  break;
-                case "Dote-45":
-                  the_sky.setAttribute("src", "#Scene-45");
-                  break;
-                case "Dote-46":
-                  the_sky.setAttribute("src", "#Scene-46");
-                  break;
-                case "Dote-47":
-                  the_sky.setAttribute("src", "#Scene-47");
-                  break;
-                case "Dote-48":
-                  the_sky.setAttribute("src", "#Scene-48");
-                  break;
-                case "Dote-49":
-                  the_sky.setAttribute("src", "#Scene-49");
-                  break;
-                case "Dote-48":
-                  the_sky.setAttribute("src", "#Scene-48");
-                  break;
-                case "Dote-49":
-                  the_sky.setAttribute("src", "#Scene-49");
-                  break;
-                case "Dote-50":
-                  the_sky.setAttribute("src", "#Scene-50");
-                  break;
-                case "Dote-51":
-                  the_sky.setAttribute("src", "#Scene-51");
-                  break;
-                case "Dote-52":
-                  the_sky.setAttribute("src", "#Scene-52");
-                  break;
-                case "Dote-53":
-                  the_sky.setAttribute("src", "#Scene-53");
-                  break;
-                case "Dote-54":
-                  the_sky.setAttribute("src", "#Scene-54");
-                  break;
-                case "Dote-55":
-                  the_sky.setAttribute("src", "#Scene-55");
-                  break;
-                case "Dote-56":
-                  the_sky.setAttribute("src", "#Scene-56");
-                  break;
-                case "Dote-57":
-                  the_sky.setAttribute("src", "#Scene-57");
-                  break;
-                case "Dote-58":
-                  the_sky.setAttribute("src", "#Scene-58");
-                  break;
-                case "Dote-59":
-                  the_sky.setAttribute("src", "#Scene-59");
-                  break;
-                case "Dote-60":
-                  the_sky.setAttribute("src", "#Scene-60");
-                  break;
-                case "Dote-61":
-                  the_sky.setAttribute("src", "#Scene-61");
-                  break;
-                case "Dote-62":
-                  the_sky.setAttribute("src", "#Scene-62");
-                  break;
-                case "Dote-63":
-                  the_sky.setAttribute("src", "#Scene-63");
-                  break;
-                case "Dote-64":
-                  the_sky.setAttribute("src", "#Scene-64");
-                  break;
-                case "Dote-65":
-                  the_sky.setAttribute("src", "#Scene-65");
-                  break;
-                case "Dote-66":
-                  the_sky.setAttribute("src", "#Scene-66");
-                  break;
-                case "Dote-67":
-                  the_sky.setAttribute("src", "#Scene-67");
-                  break;
-                case "Dote-68":
-                  the_sky.setAttribute("src", "#Scene-68");
-                  break;
-                case "Dote-69":
-                  the_sky.setAttribute("src", "#Scene-69");
-                  break;
-                case "Dote-70":
-                  the_sky.setAttribute("src", "#Scene-70");
-                  break;
-                case "Dote-71":
-                  the_sky.setAttribute("src", "#Scene-71");
-                  break;
-                case "Dote-72":
-                  the_sky.setAttribute("src", "#Scene-72");
-                  break;
-                case "Dote-73":
-                  the_sky.setAttribute("src", "#Scene-73");
-                  break;
-                case "Dote-74":
-                  the_sky.setAttribute("src", "#Scene-74");
-                  break;
-                case "Dote-75":
-                  the_sky.setAttribute("src", "#Scene-75");
-                  break;
-                case "Dote-76":
-                  the_sky.setAttribute("src", "#Scene-76");
-                  break;
-                case "Dote-77":
-                  the_sky.setAttribute("src", "#Scene-77");
-                  break;
-                case "Dote-78":
-                  the_sky.setAttribute("src", "#Scene-78");
-                  break;
-                case "Dote-79":
-                  the_sky.setAttribute("src", "#Scene-79");
-                  break;
-                case "Dote-80":
-                  the_sky.setAttribute("src", "#Scene-80");
-                  break;
-                case "Dote-81":
-                  the_sky.setAttribute("src", "#Scene-81");
-                  break;
-                case "Dote-82":
-                  the_sky.setAttribute("src", "#Scene-82");
-                  break;
-                case "Dote-83":
-                  the_sky.setAttribute("src", "#Scene-83");
-                  break;
-                case "Dote-84":
-                  the_sky.setAttribute("src", "#Scene-84");
-                  break;
-                case "Dote-85":
-                  the_sky.setAttribute("src", "#Scene-85");
-                  break;
-                default:
-                  break;
+          this.el.addEventListener("click", () => {
+            theSky.setAttribute("rotation", `0 ${The_rotation} 0`);
+            showTransition(() => {
+              if (!isNaN(doteNumber)) {
+                theSky.setAttribute("src", `#Scene-${doteNumber}`);
               }
-              let the_group_to_activate = document.querySelector(
-                `#${Group_to_activate}`
-              );
-
-              groups.forEach((group) => {
-                group.setAttribute("visible", "false");
-                group.setAttribute("scale", "0 0 0");
-              });
-              the_group_to_activate.setAttribute("visible", "true");
-              the_group_to_activate.setAttribute("scale", "1 1 1");
-
-              theBlachHover.style.opacity = "0";
-              theBlachHover.style.height = "0vh";
-            }, 1200);
+              updateGroupVisibility(Group_to_activate);
+            });
           });
         },
       });
-      const theInt = setInterval(intFunc, 4000);
 
-      function intFunc() {
-        if (img_1.complete) {
+      function showTransition(callback) {
+        theBlachHover.style.transitionDelay = "0s, 0s";
+        theBlachHover.style.opacity = "1";
+        theBlachHover.style.height = "100vh";
+
+        setTimeout(() => {
+          theBlachHover.style.transitionDelay = "0s, .6s";
+          callback();
+          theBlachHover.style.opacity = "0";
+          theBlachHover.style.height = "0vh";
+        }, 1200);
+      }
+
+      const theInt = setInterval(() => {
+        if (img1.complete) {
           loaderContainer.style.display = "none";
           clearInterval(theInt);
 
           theGuide.style.display = "flex";
-          setTimeout(() => {
-            theGuide.style.opacity = "0";
-          }, "5000");
+          setTimeout(() => (theGuide.style.opacity = "0"), 5000);
           setTimeout(() => {
             theGuide.style.display = "none";
             linkToArchviz.style.opacity = "1";
-          }, "6000");
-        } else {
-          console.log(img_1.complete);
+          }, 6000);
         }
-      }
+      }, 4000);
     </script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
